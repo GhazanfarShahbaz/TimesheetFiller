@@ -100,7 +100,7 @@ for x in range(20):
 first_hour_element = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.XPATH, first_time_xpath)))
 first_hour_element.click()
 
-if input("Are you sure all the information is correct? Press yes to submit").strip().lower() == "yes":
+if input("Are you sure all the information is correct? Press yes to submit: ").strip().lower() == "yes":
     first_hour_element.send_keys([Keys.TAB] * (20*3), Keys.ENTER, Keys.ARROW_DOWN, Keys.ENTER)
 else:
     print("Edit your env file and try again")
